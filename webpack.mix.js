@@ -11,6 +11,16 @@ const WebpackRTLPlugin = require('webpack-rtl-plugin');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.copyDirectory('node_modules/paraview-glance', 'public');
+mix.copy('node_modules/paraview-glance/dist/glance.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/glance-external-ITKReader.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/glance-external-Workbox.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/runtime.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/serviceWorker.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/vendors.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/version.js', 'public');
+mix.copy('node_modules/paraview-glance/dist/workbox-sw.prod.v2.1.2.js', 'public');
+
 
 mix.sass('resources/assets/sass/frontend/app.scss', 'public/css/frontend.css')
     .sass('resources/assets/sass/backend/app.scss', 'public/css/backend.css')

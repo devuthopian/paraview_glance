@@ -20,6 +20,18 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
         /*
+         * User ParaviewglanceController
+         */
+        Route::get('paraview_glance', 'ParaviewglanceController@index')->name('paraview_glance');
+        Route::get('s3aws', 'ParaviewglanceController@s3_bucket')->name('s3aws');
+
+         /*
+         * 
+         */
+        Route::get('s3bucket', 'ParaviewglanceController@s3_bucket')->name('s3bucket');
+
+
+        /*
          * User Account Specific
          */
         Route::get('account', 'AccountController@index')->name('account');
