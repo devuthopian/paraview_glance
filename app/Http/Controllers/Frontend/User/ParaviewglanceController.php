@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend\User;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Frontend\User\DashboardViewRequest;
+use Illuminate\Http\Request;
 use Storage;
 
 /**
@@ -14,33 +15,12 @@ class ParaviewglanceController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index()
-    {
+    public function index(){
         return view('frontend.user.paraview_glance');
     }
-      public function s3_bucket()
-    {
-      $key = $_GET['url'];
-     //echo $key;
 
-
-
-$filePath = "https://webdev.misbits.co/web/images/misbits-logo.png";
-
-
-Storage::disk('s3')->put('misbits-logo.png', file_get_contents($filePath),'public');
-
-//Storage::disk('s3')->put('file.txt', 'This is a test'); 
-
-
-
-
-
-}
-
-    
-    
-
-
-
+    public function s3_bucket(Request $request){
+        $filePath = $request->file('file');
+        Storage::disk('s3')->put('ABC.glance', file_get_contents($filePath),'public');
+    }
 }

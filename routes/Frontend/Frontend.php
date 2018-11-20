@@ -23,12 +23,12 @@ Route::group(['middleware' => 'auth'], function () {
          * User ParaviewglanceController
          */
         Route::get('paraview_glance', 'ParaviewglanceController@index')->name('paraview_glance');
-        Route::get('s3aws', 'ParaviewglanceController@s3_bucket')->name('s3aws');
+        //Route::get('s3aws', 'ParaviewglanceController@s3_bucket')->name('s3aws');
 
          /*
          * 
          */
-        Route::get('s3bucket', 'ParaviewglanceController@s3_bucket')->name('s3bucket');
+        Route::post('s3bucket', 'ParaviewglanceController@s3_bucket')->name('s3bucket');
 
 
         /*
