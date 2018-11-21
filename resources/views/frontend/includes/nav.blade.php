@@ -33,6 +33,7 @@
 
                 @if ($logged_in_user)
                     <li>{{ link_to_route('frontend.user.dashboard', trans('navs.frontend.dashboard')) }}</li>
+                    <li>{{ link_to_route('frontend.user.paraview_glance',  'Paraview Glance') }}</li>
                 @endif
 
                 @if (! $logged_in_user)

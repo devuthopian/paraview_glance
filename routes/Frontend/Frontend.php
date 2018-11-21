@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth'], function () {
          /*
          * 
          */
+        Route::get('getGlanceImages', 'ParaviewglanceController@getGlanceImages')->name('getGlanceImages');
         Route::post('s3bucket', 'ParaviewglanceController@s3_bucket')->name('s3bucket');
 
 

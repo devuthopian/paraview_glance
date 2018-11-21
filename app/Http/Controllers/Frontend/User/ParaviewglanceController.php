@@ -21,6 +21,15 @@ class ParaviewglanceController extends Controller
 
     public function s3_bucket(Request $request){
         $filePath = $request->file('file');
-        Storage::disk('s3')->put('ABC.glance', file_get_contents($filePath),'public');
+        $filename = $request->filename;
+        $result = Storage::disk('s3')->put($filename, file_get_contents($filePath),'public');
+    }
+
+    public function getGlanceImages(){
+        //$result = Storage::disk('s3')->allFiles();
+        //dd($result);
+        $file = Storage::disk('s3')->get('uploads/csv/' .  $import->filename );
+        Auth::id();
+
     }
 }
