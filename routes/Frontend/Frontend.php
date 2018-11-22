@@ -23,7 +23,7 @@ Route::group(['middleware' => 'auth'], function () {
          * User ParaviewglanceController
          */
         Route::get('paraview_glance', 'ParaviewglanceController@index')->name('paraview_glance');
-        Route::post('fetchLogo', 'ParaviewglanceController@fetchLogo')->name('fetchLogo');
+        Route::get('fetchLogo', 'ParaviewglanceController@fetchLogo')->name('fetchLogo');
         //Route::get('s3aws', 'ParaviewglanceController@s3_bucket')->name('s3aws');
 
          /*

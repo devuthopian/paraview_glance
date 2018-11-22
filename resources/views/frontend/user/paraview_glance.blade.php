@@ -23,9 +23,10 @@
 	</head>
 	<body>
 		<div id="root-container"></div>
+
 		<script type="text/javascript">
-		  const container = document.querySelector('#root-container');
-		  const glanceInstance = Glance.createViewer(container);
+		  const container         = document.querySelector('#root-container');
+		  const glanceInstance    = Glance.createViewer(container);
 		  glanceInstance.processURLArgs();
 		  
 		</script>
