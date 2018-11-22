@@ -27,6 +27,7 @@
 		  const container = document.querySelector('#root-container');
 		  const glanceInstance = Glance.createViewer(container);
 		  glanceInstance.processURLArgs();
+		  
 		</script>
 	</body>
 </html>
