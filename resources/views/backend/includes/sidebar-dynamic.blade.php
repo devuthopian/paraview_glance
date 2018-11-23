@@ -12,7 +12,11 @@
                 </a>
             </li>
             <li class="header">{{ trans('menus.backend.sidebar.system') }}</li>
-            {{ renderMenuItems(getMenuItems()) }}
+            <li class=" "><a href="{{ route('admin.access.user.index') }}"><i class="fa fa-users"></i> <span>User Management</span></a></li>
+            <li class=" "><a href="{{ route('admin.settings.edit', 1) }}"><i class="fa fa-gear"></i> <span>Settings</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section><!-- /.sidebar -->
 </aside>
+
+
+

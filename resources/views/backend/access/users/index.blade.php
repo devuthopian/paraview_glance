@@ -27,37 +27,12 @@
                             <th>{{ trans('labels.backend.access.users.table.first_name') }}</th>
                             <th>{{ trans('labels.backend.access.users.table.last_name') }}</th>
                             <th>{{ trans('labels.backend.access.users.table.email') }}</th>
-                            <th>{{ trans('labels.backend.access.users.table.confirmed') }}</th>
-                            <th>{{ trans('labels.backend.access.users.table.roles') }}</th>
                             <th>{{ trans('labels.backend.access.users.table.created') }}</th>
                             <th>{{ trans('labels.backend.access.users.table.last_updated') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
                         </tr>
                     </thead>
-                    <thead class="transparent-bg">
-                        <tr>
-                            <th>
-                                {!! Form::text('first_name', null, ["class" => "search-input-text form-control", "data-column" => 0, "placeholder" => trans('labels.backend.access.users.table.first_name')]) !!}
-                                    <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a>
-                                </th>
-                            <th>
-                                {!! Form::text('last_name', null, ["class" => "search-input-text form-control", "data-column" => 1, "placeholder" => trans('labels.backend.access.users.table.last_name')]) !!}
-                                    <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a>
-                            </th>
-                            <th>
-                                {!! Form::text('email', null, ["class" => "search-input-text form-control", "data-column" => 2, "placeholder" => trans('labels.backend.access.users.table.email')]) !!}
-                                    <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a>
-                            </th>
-                            <th></th>
-                            <th>
-                            {!! Form::text('roles', null, ["class" => "search-input-text form-control", "data-column" => 4, "placeholder" => trans('labels.backend.access.users.table.roles')]) !!}
-                                <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a>
-                            </th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
+                
                 </table>
             </div><!--table-responsive-->
         </div><!-- /.box-body -->
@@ -102,8 +77,6 @@
                     {data: 'first_name', name: '{{config('access.users_table')}}.first_name'},
                     {data: 'last_name', name: '{{config('access.users_table')}}.last_name'},
                     {data: 'email', name: '{{config('access.users_table')}}.email'},
-                    {data: 'confirmed', name: '{{config('access.users_table')}}.confirmed'},
-                    {data: 'roles', name: '{{config('access.roles_table')}}.name', sortable: false},
                     {data: 'created_at', name: '{{config('access.users_table')}}.created_at'},
                     {data: 'updated_at', name: '{{config('access.users_table')}}.updated_at'},
                     {data: 'actions', name: 'actions', searchable: false, sortable: false}
