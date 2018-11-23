@@ -1,0 +1,102 @@
+{
+  "_args": [
+    [
+      "paraview-glance@3.0.0",
+      "B:\\wamp64\\www\\paraview_glance"
+    ]
+  ],
+  "_from": "paraview-glance@3.0.0",
+  "_id": "paraview-glance@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-QPOwO5uUZ4pJ2X+5d8WevgvEdrsBgb2tTvCGtCEKYmU5XTp7XAfTSuMC7rdWIuvGJFTUANkeyXh/l4w9PTffmA==",
+  "_location": "/paraview-glance",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "paraview-glance@3.0.0",
+    "name": "paraview-glance",
+    "escapedName": "paraview-glance",
+    "rawSpec": "3.0.0",
+    "saveSpec": null,
+    "fetchSpec": "3.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/paraview-glance/-/paraview-glance-3.0.0.tgz",
+  "_spec": "3.0.0",
+  "_where": "B:\\wamp64\\www\\paraview_glance",
+  "author": {
+    "name": "Kitware"
+  },
+  "bugs": {
+    "url": "https://github.com/kitware/paraview-glance/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "itk": "9.1.1",
+    "material-design-icons-iconfont": "3.0.3",
+    "mousetrap": "^1.6.2",
+    "typeface-roboto": "0.0.54",
+    "vtk.js": "8.0.1",
+    "vue": "2.5.16",
+    "vuetify": "1.0.19",
+    "vuex": "^3.0.1",
+    "webworker-promise": "0.4.1",
+    "workbox-sw": "2.1.2"
+  },
+  "description": "Web application for Visualizing Scientific and Medical datasets",
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "7.0.0",
+    "eslint-plugin-vue": "4.5.0",
+    "kw-doc": "1.2.2",
+    "kw-web-suite": "8.0.0",
+    "paraview-glance": "2.8.0",
+    "vue-loader": "15.2.4",
+    "vue-style-loader": "4.1.0",
+    "vue-template-compiler": "2.5.16",
+    "webpack-merge": "4.1.2",
+    "workbox-webpack-plugin": "2.1.2",
+    "write-file-webpack-plugin": "^4.3.2"
+  },
+  "homepage": "https://github.com/kitware/paraview-glance#readme",
+  "keywords": [
+    "3d",
+    "visualization",
+    "webgl",
+    "medical",
+    "scientific",
+    "vtk",
+    "paraview",
+    "geometry",
+    "point cloud",
+    "mesh"
+  ],
+  "license": "BSD-3-Clause",
+  "name": "paraview-glance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitware/paraview-glance.git"
+  },
+  "scripts": {
+    "build": "webpack --config build/webpack.dev.config.js",
+    "build:release": "webpack --config build/webpack.prod.config.js -p",
+    "bundle": "inline-source --compress false --root ./dist ./dist/index.html ./dist/ParaViewGlance.html",
+    "commit": "git cz",
+    "dev": "webpack-dev-server --config build/webpack.dev.config.js",
+    "doc": "kw-doc -c ./documentation/config.js",
+    "doc:publish": "kw-doc -c ./documentation/config.js -mp",
+    "doc:www": "kw-doc -c ./documentation/config.js -s",
+    "prepublishOnly": "npm run version && npm run bundle",
+    "reformat": "prettier --config ./prettier.config.js --write \"src/**/*.js\"",
+    "semantic-release": "semantic-release",
+    "validate": "prettier --config ./prettier.config.js --list-different \"src/**/*.js\"",
+    "version": "node ./build/writeVersion.js"
+  },
+  "version": "3.0.0"
+}
