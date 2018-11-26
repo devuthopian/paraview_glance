@@ -22,22 +22,10 @@
 		<!-- Nav tabs -->
 		<ul id="myTab" class="nav nav-tabs setting-tab-list" role="tablist">
 			<li role="presentation" class="active">
-				<a href="#tab1" aria-controls="home" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.seo') }}</a>
+				<a href="#tab1" aria-controls="home" role="tab" data-toggle="tab">Settings</a>
 			</li>
 			<li role="presentation">
-				<a href="#tab2" aria-controls="1" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.companydetails') }}</a>
-			</li>
-			<li role="presentation">
-				<a href="#tab3" aria-controls="2" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.mail') }}</a>
-			</li>
-			<li role="presentation">
-				<a href="#tab4" aria-controls="3" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.footer') }}</a>
-			</li>
-			<li role="presentation">
-				<a href="#tab5" aria-controls="4" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.terms') }}</a>
-			</li>
-			<li role="presentation">
-				<a href="#tab6" aria-controls="5" role="tab" data-toggle="tab">{{ trans('labels.backend.settings.google') }}</a>
+				<a href="#tab2" aria-controls="1" role="tab" data-toggle="tab">Paraview Glance Settings</a>
 			</li>
 		</ul>
 
@@ -58,7 +46,7 @@
 						</div>
 						<div class="img-remove-logo">
 							@if($setting->logo)
-							<img height="50" width="50" src="{{ Storage::disk('public')->url('img/logo/' . $setting->logo) }}">
+							<img height="50" width="50" src="/paraview_glance/storage/app/public/img/logo/{{ $setting->logo }} ">
 							<i id="remove-logo-img" class="fa fa-times remove-logo" data-id="logo" aria-hidden="true"></i>
 							@endif
 						</div>
@@ -88,6 +76,84 @@
 					</div>
 					<!--col-lg-10-->
 				</div>
+				
+				<!--form control-->
+			</div>
+			<div role="tabpanel" class="tab-pane" id="tab2">
+				<div class="form-group">
+					{{ Form::label('Glance Card Title', 'Glance Card Title', ['class' => 'col-lg-2
+					control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::text('glance_card_title', null,['class' => 'form-control', 'placeholder' => 'Glance Card Title',
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ Form::label('company_contact', 'Glance Card Discription', ['class'
+					=> 'col-lg-2 control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::textarea('glance_card_disc', null,['class' => 'form-control', 'placeholder' => 'Glance Card Discription',
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ Form::label('Open File Button Text', 'Open File Button Text', ['class' => 'col-lg-2
+					control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::text('glance_open_file_text', null,['class' => 'form-control', 'placeholder' => 'Open File Button Text',
+						'rows' => 2]) }}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ Form::label('File Drop Discription', 'File Drop Discription', ['class'
+					=> 'col-lg-2 control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::textarea('glance_open_file_disc', null,['class' => 'form-control', 'placeholder' => 'File Drop Discription',
+						'rows' => 2]) }}
+					</div>
+				</div>
+			   <div class="form-group">
+					{{ Form::label('Glance Save State Text', 'Glance Save State Text', ['class' => 'col-lg-2
+					control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::text('glance_save_state_text', null,['class' => 'form-control', 'placeholder' => 'Glance Save State Text',
+						'rows' => 2]) }}
+					</div>
+				</div>
+					<div class="form-group">
+					{{ Form::label('Glance Screenshot Text', 'Glance Screenshot Text', ['class' => 'col-lg-2
+					control-label']) }}
+
+					<div class="col-lg-10">
+							{{ Form::text('glance_screenshot_text', null,['class' => 'form-control', 'placeholder' => 'Glance Screenshot Text',
+						'rows' => 2]) }}
+					</div>
+				   </div>
+
+
+	                 <div class="form-group">
+					{{ Form::label('Sidebar Position', 'Sidebar Position', ['class' => 'col-lg-2
+					control-label']) }}
+
+					<div class="col-lg-10">
+							 {!!Form::select('glance_sidebar_position', ['left','right'], $setting->glance_sidebar_position, ['class' => 'form-control'])!!}
+
+					</div>
+				   </div>
+
+
+				  
+
+
+				<!--form control-->
+			</div>
+			<div role="tabpanel" class="tab-pane" id="tab3">
+
 				<!--form control-->
 				<div class="form-group">
 					{{ Form::label('seo_title', trans('validation.attributes.backend.settings.metatitle'), ['class' => 'col-lg-2 control-label'])
@@ -123,31 +189,16 @@
 					</div>
 					<!--col-lg-3-->
 				</div>
-				<!--form control-->
-			</div>
-			<div role="tabpanel" class="tab-pane" id="tab2">
+
 				<div class="form-group">
-					{{ Form::label('company_address', trans('validation.attributes.backend.settings.companydetails.address'), ['class' => 'col-lg-2
+						{{ Form::label('Glance Card Title', trans('validation.attributes.backend.settings.companydetails.address'), ['class' => 'col-lg-2
 					control-label']) }}
 
 					<div class="col-lg-10">
-						{{ Form::textarea('company_address', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.address'),
+						{{ Form::textarea('company_address', null,['class' => 'form-control', 'placeholder' => 'Glance Card Title',
 						'rows' => 2]) }}
-					</div>
-				</div>
-				<div class="form-group">
-					{{ Form::label('company_contact', trans('validation.attributes.backend.settings.companydetails.contactnumber'), ['class'
-					=> 'col-lg-2 control-label']) }}
 
-					<div class="col-lg-10">
-						{{ Form::text('company_contact', null,['class' => 'form-control', 'placeholder' => trans('validation.attributes.backend.settings.companydetails.contactnumber'),
-						'rows' => 2]) }}
-					</div>
-				</div>
-				<!--form control-->
-			</div>
-			<div role="tabpanel" class="tab-pane" id="tab3">
-				<div class="form-group">
+
 					{{ Form::label('from_name', trans('validation.attributes.backend.settings.mail.fromname'), ['class' => 'col-lg-2 control-label'])
 					}}
 

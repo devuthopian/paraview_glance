@@ -68,7 +68,7 @@
                 </div><!--form control-->
 
                 {{-- Status --}}
-                <div class="form-group">
+                <div style="display: none;" class="form-group">
                     {{ Form::label('status', trans('validation.attributes.backend.access.users.active'), ['class' => 'col-lg-2 control-label']) }}
 
                     <div class="col-lg-1">
@@ -82,7 +82,7 @@
                 </div><!--form control-->
 
                 {{-- Confirmed --}}
-                <div class="form-group">
+                <div style="display: none;" class="form-group">
                     {{ Form::label('confirmed', trans('validation.attributes.backend.access.users.confirmed'), ['class' => 'col-lg-2 control-label']) }}
 
                     <div class="col-lg-1">
@@ -96,7 +96,7 @@
                 </div><!--form control-->
 
                 {{-- Confirmation Email --}}
-                <div class="form-group">
+                <div style="display: none;" class="form-group">
                     <label class="col-lg-2 control-label">{{ trans('validation.attributes.backend.access.users.send_confirmation_email') }}<br/>
                         <small>{{ trans('strings.backend.access.users.if_confirmed_off') }}</small>
                     </label>
@@ -122,7 +122,7 @@
                                 <label for="role-{{$role->id}}" class="control control--radio">
                                 <input type="radio" value="{{$role->id}}" name="assignees_roles[]" id="role-{{$role->id}}" class="get-role-for-permissions" {{ $role->id == 3 ? 'checked' : '' }} />  &nbsp;&nbsp;{!! $role->name !!}
                                 <div class="control__indicator"></div>
-                                    <a href="#" data-role="role_{{ $role->id }}" class="show-permissions small">
+                                    <a  style="display: none"; href="#" data-role="role_{{ $role->id }}" class="show-permissions small">
                                         (
                                             <span class="show-text">{{ trans('labels.general.show') }}</span>
                                             <span class="hide-text hidden">{{ trans('labels.general.hide') }}</span>
@@ -154,7 +154,7 @@
                 </div><!--form control-->
 
                 {{-- Associated Permissions --}}
-                <div class="form-group">
+                <div  style="display: none"; class="form-group">
                     {{ Form::label('associated-permissions', trans('validation.attributes.backend.access.roles.associated_permissions'), ['class' => 'col-lg-2 control-label']) }}
                     <div class="col-lg-10">
                         <div id="available-permissions" class="hidden mt-20" style="width: 700px; height: 200px; overflow-x: hidden; overflow-y: scroll;">

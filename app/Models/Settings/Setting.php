@@ -18,7 +18,7 @@ class Setting extends BaseModel
      *
      * @var array
      */
-    protected $fillable = ['logo', 'favicon', 'seo_title', 'seo_keyword', 'seo_description', 'company_contact', 'company_address', 'from_name', 'from_email', 'footer_text', 'copyright_text', 'terms', 'disclaimer', 'google_analytics'];
+    protected $fillable = ['logo', 'favicon', 'seo_title', 'seo_keyword', 'seo_description', 'company_contact', 'company_address', 'from_name', 'from_email', 'footer_text', 'copyright_text', 'terms', 'disclaimer', 'google_analytics', 'glance_card_title', 'glance_card_disc', 'glance_open_file_text', 'glance_open_file_disc', 'glance_save_state_text', 'glance_screenshot_text', 'glance_sidebar_position'];
 
     public function __construct()
     {

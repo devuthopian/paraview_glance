@@ -7356,7 +7356,7 @@ jQuery(document).ready(function() {
                         image: this.imageUrl,
                         filename: this.filename + this.fileType
                     });
-                    alert(JSON.stringify(this.image));
+                   // alert(JSON.stringify(this.image));
                 }
             }, Object(i.d)({
                 close: pt.CLOSE_SCREENSHOT_DIALOG
@@ -9407,7 +9407,6 @@ jQuery(document).ready(function() {
                                         contentType: false,
                                         type: 'POST',
                                         success: function(data){
-                                            alert(data);
                                         },
                                         error: function (xhr, ajaxOptions, thrownError) {
                                             var errorMsg = 'Ajax request failed: ' + xhr.responseText;
