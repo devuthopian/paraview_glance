@@ -12,6 +12,7 @@ const WebpackRTLPlugin = require('webpack-rtl-plugin');
  |
  */
 mix.copyDirectory('node_modules/paraview-glance', 'public');
+mix.copyDirectory('node_modules/webxr-polyfill', 'public');
 mix.copy('node_modules/paraview-glance/dist/glance.js', 'public');
 mix.copy('node_modules/paraview-glance/dist/glance-external-ITKReader.js', 'public');
 mix.copy('node_modules/paraview-glance/dist/glance-external-Workbox.js', 'public');
