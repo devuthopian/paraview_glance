@@ -86,3 +86,9 @@ public/externals/ITKReader/ITKDicomImageReader.js
 public/externals/ITKReader/index.js
 public/glance.js
 public/.eslintrc.js
+public/test
+public/rollup.config.module.js
+public/rollup.config.min.js
+public/rollup.config.js
+public/licenses.txt
+public/.travis.yml

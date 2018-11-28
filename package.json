@@ -31,6 +31,8 @@
     "paraview-glance": "^3.0.0",
     "pluralize": "^7.0.0",
     "select2": "^4.0.4",
-    "tinymce": "^4.5.8"
+    "tinymce": "^4.5.8",
+    "webxr": "0.0.0",
+    "webxr-polyfill": "^1.0.11"
   }
 }
