@@ -23,12 +23,24 @@
 	</head>
 	<body>
 		<div id="root-container"></div>
+		<script type="text/javascript">		
+
+			    var glance_card_title = "<?php echo  $records['glance_card_title'] ?> ";
+			    var glance_card_disc = "<?php echo  $records['glance_card_disc'] ?> ";
+			    var glance_open_file_text = "<?php echo  $records['glance_open_file_text'] ?> ";
+			    var glance_open_file_disc = "<?php echo  $records['glance_open_file_disc'] ?> ";
+			    var glance_save_state_text = "<?php echo  $records['glance_save_state_text'] ?> ";
+			    var glance_screenshot_text = "<?php echo  $records['glance_screenshot_text'] ?> ";
+			    var glance_sidebar_position = "<?php echo  $records['glance_sidebar_position'] ?> ";
+
+                      </script>
+
+
 
 		<script type="text/javascript">
 		  const container         = document.querySelector('#root-container');
 		  const glanceInstance    = Glance.createViewer(container);
 		  glanceInstance.processURLArgs();
-		  
 		</script>
 	</body>
 </html>
