@@ -9,7 +9,6 @@
             ("object" == typeof exports ? exports : A)[a] = e[a]
     }
 }(window, function() {
-
     function getGlanceImages(){
 jQuery(document).ready(function() {
         jQuery.ajaxSetup({
@@ -35,7 +34,6 @@ jQuery(document).ready(function() {
         });
          
     }
-
     return (window.webpackJsonp = window.webpackJsonp || []).push([[2], [, , , , , , function(A, t, e) {
         "use strict";
         var a = e(84)
@@ -6382,13 +6380,7 @@ jQuery(document).ready(function() {
                 }
             }, [e("v-card-title", {
                 staticClass: "display-1"
-            }, [A._v("Visualize your data with ParaView Glance")]), A._v(" "), e("v-card-text", [A._v("\n              A general purpose standalone web application by\n              "), e("a", {
-                staticClass: "indigo--text text--lighten-3",
-                attrs: {
-                    href: "https://www.kitware.com/",
-                    rel: "noopener noreferrer"
-                }
-            }, [A._v("Kitware, Inc.")]), A._v("\n              that can be used to visualize many data types.\n              It is also a great framework for building custom\n              viewers on the web which can involve remote services.\n            ")])], 1)], 1), A._v(" "), A.smallScreen ? A._e() : e("v-flex", {
+            }, [A._v(glance_card_title)]), A._v(" "), e("v-card-text", [A._v(glance_card_disc)])], 1)], 1), A._v(""), A.smallScreen ? A._e() : e("v-flex", {
                 key: "if-large-enough-screen",
                 attrs: {
                     xs6: "",
@@ -6434,9 +6426,9 @@ jQuery(document).ready(function() {
                             }
                         }, [e("span", {
                             class: A.$style.buttonText
-                        }, i ? [A._v("drop your file")] : [A._v("open a file")]), A._v(" "), e("v-icon", [A._v("folder_open")])], 1), A._v(" "), e("div", {
+                        }, i ? [A._v("drop your file")] : [A._v(glance_open_file_text)]), A._v(" "), e("v-icon", [A._v("folder_open")])], 1), A._v(" "), e("div", {
                             class: A.$style.noSelect
-                        }, [A._v("\n                  or drop one anywhere in this box to begin.\n                ")])], 1)])
+                        }, [A._v(glance_open_file_disc)])], 1)])
                     }
                 }])
             })], 1)], 1)], 1)], 1), A._v(" "), e("v-container", {
@@ -8162,7 +8154,7 @@ jQuery(document).ready(function() {
                                 value: !A.smallScreen,
                                 expression: "!smallScreen"
                             }]
-                        }, [A._v("Save state")])], 1), A._v(" "), e("v-btn", {
+                        }, [A._v(glance_save_state_text)])], 1), A._v(" "), e("v-btn", {
                             directives: [{
                                 name: "show",
                                 rawName: "v-show",
@@ -8185,7 +8177,7 @@ jQuery(document).ready(function() {
                                 value: !A.smallScreen,
                                 expression: "!smallScreen"
                             }]
-                        }, [A._v("Screenshots (" + A._s(A.screenshotCount) + ")")])], 1), A._v(" "), e("v-btn", {
+                        }, [A._v(glance_screenshot_text+"(" + A._s(A.screenshotCount) + ")")])], 1), A._v(" "), e("v-btn", {
                             class: A.$style.toolbarButton,
                             attrs: {
                                 flat: ""
@@ -8236,7 +8228,7 @@ jQuery(document).ready(function() {
                                 },
                                 expression: "screenshotsDrawer"
                             }
-                        }, [e("screenshots", {
+                        }, [e("da", {
                             on: {
                                 "screenshot-count": function(t) {
                                     A.screenshotCount = t
