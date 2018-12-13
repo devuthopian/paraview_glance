@@ -17,8 +17,8 @@ class ParaviewglanceController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index() {
-
       $settingData = Setting::first();
+      $logo = $settingData->logo;
       $SettingData['glance_card_title'] = $settingData->glance_card_title;
       $SettingData['glance_card_disc'] = $settingData->glance_card_disc;
       $SettingData['glance_open_file_text'] = $settingData->glance_open_file_text;
@@ -27,7 +27,6 @@ class ParaviewglanceController extends Controller
       $SettingData['glance_screenshot_text'] = $settingData->glance_screenshot_text;
       $SettingData['glance_sidebar_position'] = $settingData->glance_sidebar_position;
       return view('frontend.user.paraview_glance', ['records' => $SettingData]);
-
     }
 
     public function s3_bucket(Request $request){
