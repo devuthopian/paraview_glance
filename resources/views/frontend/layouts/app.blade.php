@@ -8,6 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <title>@yield('title', app_name())</title>
 
         <!-- Meta -->
@@ -28,6 +30,10 @@
         {!! Html::style('js/select2/select2.css') !!}
         @yield('after-styles')
 
+        <link href="{{ asset('css/custom/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/custom/style.css') }}" rel="stylesheet">
+
+
         <!-- Scripts -->
         <script>
             window.Laravel = <?php echo json_encode([
@@ -42,22 +48,19 @@
     </head>
     <body id="app-layout">
         <div id="app">
+                @if ($logged_in_user)
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
+              @endif
 
-            <div class="container">
+           <main>
                 @include('includes.partials.messages')
                 @yield('content')
             </div><!-- container -->
-        </div><!--#app-->
+        </main> 
 
-        <!-- Scripts -->
-        @yield('before-scripts')
-        {!! Html::script(mix('js/frontend.js')) !!}
-        @yield('after-scripts')
-        {{ Html::script('js/jquerysession.js') }}
-        {{ Html::script('js/frontend/frontend.js') }}
-        {!! Html::script('js/select2/select2.js') !!}
+
+
 
         <script type="text/javascript">
             if("{{Route::currentRouteName()}}" !== "frontend.user.account")

@@ -34,7 +34,6 @@
         });        
     }
 
-
 return (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["glance"],{
 
 /***/ "./node_modules/babel-loader/lib/index.js!./node_modules/eslint-loader/index.js!./src/app.js":
@@ -3402,11 +3401,12 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
-        jQuery.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-            }
-        });
+
+	jQuery.ajaxSetup({
+		headers: {
+        		'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+		}
+	});
         var myVariable;
         $.ajax({
             'async': false,
@@ -3419,9 +3419,7 @@ eval("// style-loader: Adds some css to the DOM by adding a <style> tag\n\n// lo
                 myVariable = data;
             }
         });
-
-        eval("module.exports = '"+myVariable+"'");
-
+	eval("module.exports = '"+myVariable+"'");
 /***/ }),
 
 /***/ 0:

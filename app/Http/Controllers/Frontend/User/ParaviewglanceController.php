@@ -37,17 +37,24 @@ class ParaviewglanceController extends Controller
 
     public function getGlanceImages(){
         $result = Storage::disk('s3')->allFiles();
-        dd( $result);
+
+        $resultArr = [];
+        $i = 0;
+        foreach ($result as $key => $value) {
+          $file = Storage::disk('s3')->get($value);
+          dd($file);
+          /*$resultArr[$i]['id'] = $value;
+          $resultArr[$i]['date'] = $value;
+          $i++;*/
+        }
+
+        return $result;
     }
 
     public function fetchLogo(Request $request){
-
         $settingData = Setting::first();
-
         $logo = $settingData->logo;
-       
         echo  '/paraview_glance/storage/app/public/img/logo/'.$logo;
-
         die;
     }
 }
